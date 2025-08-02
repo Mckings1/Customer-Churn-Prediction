@@ -18,10 +18,8 @@ An end-to-end machine learning project designed to predict customer churn using 
 * [Example Workflow](#example-workflow)
 * [Results](#results)
 * [Extending the Project](#extending-the-project)
-* [Portfolio Talking Points](#portfolio-talking-points)
 * [Folder Structure](#folder-structure)
 * [Tech Stack](#tech-stack)
-* [License](#license)
 
 ---
 
@@ -135,7 +133,6 @@ pip install -r requirements.txt
 2. Download and place the dataset in `data/`.
 3. Open `notebooks/01-EDA.ipynb` for data exploration.
 4. Run `notebooks/02-Modeling.ipynb` for model training and evaluation.
-5. Final model artifacts will be saved to `models/`.
 
 ---
 
@@ -151,7 +148,7 @@ pip install -r requirements.txt
 
 ## Results
 
-* Best model: XGBoost (example ROC-AUC \~0.85).
+* Best model: ROC-AUC \~0.86.
 * Key churn indicators: contract type, monthly charges, tenure.
 * Actionable insight: Customers with month-to-month contracts and high monthly charges are at highest risk.
 
@@ -165,29 +162,27 @@ pip install -r requirements.txt
 
 ---
 
-## Portfolio Talking Points
-
-* Demonstrates your ability to build **production-ready ML pipelines**.
-* Showcases **model explainability** (SHAP).
-* Tackles **imbalanced classification**, common in business problems.
-
----
-
 ## Folder Structure
 
 ```
-customer-churn-prediction/
-├─ data/
-│  └─ telco_customer_churn.csv
-├─ notebooks/
-│  ├─ 01-EDA.ipynb
-│  └─ 02-Modeling.ipynb
-├─ models/
-│  └─ churn_model.pkl
-├─ scripts/
-│  └─ preprocess.py
-├─ requirements.txt
-└─ README.md
+Customer-Churn-Prediction/
+├── data/
+|   ├── processed/
+|       ├── telco_customer_churn_cleaned.csv
+|   ├── raw/
+|       ├── telco_customer_churn.csv
+├── notebooks/
+│   ├── 01-EDA.ipynb
+│   └── 02-Modeling.ipynb
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py
+│   ├── model_evaluation.py
+│   ├── model_training.py
+├── main.py
+├── README.md
+├── requirements.txt
+
 ```
 
 ---
@@ -196,12 +191,8 @@ customer-churn-prediction/
 
 * Python (pandas, numpy, scikit-learn, xgboost)
 * Jupyter Notebook for analysis
-* SHAP for interpretability
 * Matplotlib & Seaborn for visualization
 
 ---
 
-## License
-
-MIT (change as required).
 
