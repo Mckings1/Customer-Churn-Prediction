@@ -61,6 +61,7 @@ This project demonstrates:
 ## Dataset
 
 **Option 1:** Use the [Telco Customer Churn dataset](https://www.kaggle.com/blastchar/telco-customer-churn).
+
 **Option 2:** Use your own business/customer dataset (if available).
 
 The dataset includes columns like:
